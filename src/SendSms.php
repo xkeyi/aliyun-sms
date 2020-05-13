@@ -68,7 +68,7 @@ class SendSms
 
             $result = json_decode($contents, true);
             if ($result['Code'] != 'OK') {
-                throw new GatewayErrorException($result['message'], $result['Code'], $result);
+                throw new GatewayErrorException($result['Message'], $result['Code'], $result);
             }
 
             return $result;
